@@ -10,4 +10,10 @@ A showcase of charts available in [Victory Native XL](https://github.com/Formida
 
 ## Sample Charts
 
-### Bar Chart
+### Line Chart
+
+A line chart complete with gestures and a linear gradient area
+
+<p align="center">
+  <img src="./docs/line_chart.gif" />
+</p>
