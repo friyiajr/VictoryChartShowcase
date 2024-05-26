@@ -8,4 +8,8 @@ export const screens: Screen[] = [
     name: "Line Chart 📈",
     navigationId: "Line Chart",
   },
+  {
+    name: "Bar Chart 📊",
+    navigationId: "Bar Chart",
+  },
 ];

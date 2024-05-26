@@ -18,7 +18,7 @@ export const Home = () => {
               <TouchableOpacity
                 onPress={() => navigate(value.item.navigationId)}
               >
-                <Card height={75} justifyContent="center">
+                <Card height={75} justifyContent="center" marginVertical={10}>
                   <Text textAlign="center">{value.item.name}</Text>
                 </Card>
               </TouchableOpacity>

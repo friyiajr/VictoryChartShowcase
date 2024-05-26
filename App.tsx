@@ -10,6 +10,7 @@ import { Home } from "./src/Home";
 import { LineChart } from "./src/LineChart/LineChart";
 
 import { LogBox } from "react-native";
+import { BarChart } from "./src/BarChart/BarChart";
 
 if (__DEV__) {
   const ignoreWarns = [
@@ -47,6 +48,7 @@ export default function App() {
         >
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Line Chart" component={LineChart} />
+          <Stack.Screen name="Bar Chart" component={BarChart} />
         </Stack.Navigator>
       </NavigationContainer>
     </GluestackUIProvider>
