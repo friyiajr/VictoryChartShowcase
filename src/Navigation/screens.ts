@@ -12,4 +12,8 @@ export const screens: Screen[] = [
     name: "Bar Chart 📊",
     navigationId: "Bar Chart",
   },
+  {
+    name: "Pie Chart 🥧",
+    navigationId: "Pie Chart",
+  },
 ];
