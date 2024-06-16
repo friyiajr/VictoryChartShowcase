@@ -12,6 +12,8 @@ import { LineChart } from "./src/LineChart/LineChart";
 import { LogBox } from "react-native";
 import { BarChart } from "./src/BarChart/BarChart";
 import { PieChart } from "./src/PieChart/PieChart";
+import { WavyBars } from "./src/WavyBars/WavyBars";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 if (__DEV__) {
   const ignoreWarns = [
@@ -37,22 +39,25 @@ export default function App() {
   const colorMode = useColorScheme() as COLORMODES;
 
   return (
-    <GluestackUIProvider config={config} colorMode={colorMode}>
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            headerStyle: {
-              backgroundColor: colorMode === "dark" ? "black" : "white",
-            },
-            headerTintColor: colorMode === "dark" ? "white" : "black",
-          }}
-        >
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Line Chart" component={LineChart} />
-          <Stack.Screen name="Bar Chart" component={BarChart} />
-          <Stack.Screen name="Pie Chart" component={PieChart} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </GluestackUIProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <GluestackUIProvider config={config} colorMode={colorMode}>
+        <NavigationContainer>
+          <Stack.Navigator
+            screenOptions={{
+              headerStyle: {
+                backgroundColor: colorMode === "dark" ? "black" : "white",
+              },
+              headerTintColor: colorMode === "dark" ? "white" : "black",
+            }}
+          >
+            <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="Line Chart" component={LineChart} />
+            <Stack.Screen name="Bar Chart" component={BarChart} />
+            <Stack.Screen name="Pie Chart" component={PieChart} />
+            <Stack.Screen name="Wavy Bars" component={WavyBars} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </GluestackUIProvider>
+    </GestureHandlerRootView>
   );
 }
